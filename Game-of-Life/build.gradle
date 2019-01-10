@@ -41,9 +41,9 @@ project(":desktop") {
 
 
     dependencies {
-        compile project(":core")
-        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        implementation project(":core")
+        implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     }
 }
 
@@ -52,8 +52,10 @@ project(":core") {
 
 
     dependencies {
-        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-        compile "com.kotcrab.vis:vis-ui:1.4.2"
+        implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+        implementation "com.kotcrab.vis:vis-ui:1.4.2"
+
+        implementation 'org.jetbrains:annotations:15.0'
     }
 }
 

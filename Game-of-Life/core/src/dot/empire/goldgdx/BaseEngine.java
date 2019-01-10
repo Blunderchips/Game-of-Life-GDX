@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Disposable;
+import org.jetbrains.annotations.Contract;
 
 import static com.badlogic.gdx.graphics.GL20.GL_COLOR_BUFFER_BIT;
 
@@ -50,7 +51,7 @@ public final class BaseEngine extends ApplicationAdapter implements Disposable {
      */
     @Override
     public void create() {
-        Gdx.app.setLogLevel(Application.LOG_DEBUG);
+        // Gdx.app.setLogLevel(Application.LOG_DEBUG);
 
         this.fpsLogger = new FPSLogger();
 
@@ -200,6 +201,14 @@ public final class BaseEngine extends ApplicationAdapter implements Disposable {
         return num;
     }
 
+    /**
+     * @param xPos    position of the cell on the X-axis
+     * @param yPos    position of the cell on the Y-axis
+     * @param xOffset offset to be added to the X-axis
+     * @param yOffset offset to be added to the Y-axis
+     * @return 1 if the neighbour is alive
+     */
+    @Contract(pure = true)
     private int getNeighbours(int xPos, int yPos, int xOffset, int yOffset) {
         try {
             return cells[xPos + xOffset][yPos + yOffset] ? 1 : 0;
