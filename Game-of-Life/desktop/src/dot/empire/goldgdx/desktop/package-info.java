@@ -1,5 +1,5 @@
 /**
- * Main game launcher.
+ * Main application launcher.
  *
  * @author Matthew 'siD' Van der Bijl
  */
