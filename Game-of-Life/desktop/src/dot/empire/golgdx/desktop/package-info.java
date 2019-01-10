@@ -3,4 +3,4 @@
  *
  * @author Matthew 'siD' Van der Bijl
  */
-package dot.empire.goldgdx.desktop;
+package dot.empire.golgdx.desktop;

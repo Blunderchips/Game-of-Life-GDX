@@ -1,4 +1,4 @@
-package dot.empire.goldgdx;
+package dot.empire.golgdx;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;

@@ -1,15 +1,15 @@
-package dot.empire.goldgdx.desktop;
+package dot.empire.golgdx.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import dot.empire.goldgdx.BaseEngine;
+import dot.empire.golgdx.BaseEngine;
 
 /**
  * Main file. Contains main method.
  *
  * @author Matthew 'siD' Van der Bijl
  *
- * @see dot.empire.goldgdx.BaseEngine
+ * @see dot.empire.golgdx.BaseEngine
  */
 public final class DesktopLauncher {
 
