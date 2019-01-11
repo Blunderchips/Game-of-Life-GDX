@@ -40,9 +40,12 @@ project(":desktop") {
     apply plugin: "java"
     
     dependencies {
-        implementation project(":core")
+        compile project(":core")
         implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+
+        // https://mvnrepository.com/artifact/com.ezware.oxbow/TaskDialog
+        implementation group: 'com.ezware.oxbow', name: 'TaskDialog', version: '1.0.0'
     }
 }
 

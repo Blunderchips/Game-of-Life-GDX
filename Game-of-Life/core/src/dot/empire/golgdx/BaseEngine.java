@@ -59,7 +59,7 @@ public final class BaseEngine extends ApplicationAdapter implements Disposable {
         this.renderer.setAutoShapeType(true);
         this.renderer.setColor(Color.BLACK);
 
-        this.cells = new boolean[500][500];
+        this.cells = new boolean[250][250];
         for (int x = 0; x < cells[0].length; x++) {
             for (int y = 0; y < cells[0].length; y++) {
                 this.cells[x][y] = MathUtils.randomBoolean();

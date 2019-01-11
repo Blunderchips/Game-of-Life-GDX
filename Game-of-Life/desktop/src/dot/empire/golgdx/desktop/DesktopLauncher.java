@@ -2,7 +2,10 @@ package dot.empire.golgdx.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.ezware.dialog.task.TaskDialogs;
 import dot.empire.golgdx.BaseEngine;
+
+import java.awt.*;
 
 /**
  * Main file. Contains main method.
@@ -36,6 +39,12 @@ public final class DesktopLauncher {
         cfg.samples = 0; // for clean edges
         // cfg.resizable = false;
 
-        new LwjglApplication(new BaseEngine(), cfg);
+        try {
+            new LwjglApplication(new BaseEngine(), cfg);
+        } catch (Throwable t) {
+            Toolkit.getDefaultToolkit().beep();
+            t.printStackTrace(System.err);
+            TaskDialogs.showException(t);
+        }
     }
 }
