@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Disposable;
-import org.jetbrains.annotations.Contract;
+//import org.jetbrains.annotations.Contract;
 
 import static com.badlogic.gdx.graphics.GL20.GL_COLOR_BUFFER_BIT;
 
@@ -213,7 +213,7 @@ public final class BaseEngine extends ApplicationAdapter implements Disposable {
      *
      * @return 1 if the neighbour is alive
      */
-    @Contract(pure = true)
+//    @Contract(pure = true)
     private int getNeighbours(int xPos, int yPos, int xOffset, int yOffset) {
         try {
             return cells[xPos + xOffset][yPos + yOffset] ? 1 : 0;
